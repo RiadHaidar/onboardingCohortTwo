@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+package weather;
+
+// Request message for getting weather data
+message WeatherRequest {
+  string city = 1;
+}
+
+// Response message containing weather information
+message WeatherResponse {
+  string city = 1;
+  string country = 2;
+  string temperature = 3;
+  string condition = 4;
+  string humidity = 5;
+  string wind_speed = 6;
+  string last_updated = 7;
+}
+
+// Weather service with our API function
+service WeatherService {
+  rpc GetWeather(WeatherRequest) returns (WeatherResponse);
+}
