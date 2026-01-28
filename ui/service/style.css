@@ -1,0 +1,224 @@
+/* ============================= */
+/*     WEATHER SERVICE STYLES    */
+/* ============================= */
+
+* {
+  box-sizing: border-box;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', sans-serif;
+}
+
+/* ============================= */
+/*          CONTAINERS           */
+/* ============================= */
+
+.service-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.service-header {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.service-header h2 {
+  color: #2c3e50;
+  font-size: 2rem;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.service-header p {
+  color: #7f8c8d;
+  font-size: 1rem;
+  margin: 0;
+}
+
+.content-box {
+  margin-bottom: 20px;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+/* ============================= */
+/*        INPUT SECTION          */
+/* ============================= */
+
+.input-group {
+  margin-bottom: 15px;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #2c3e50;
+  font-size: 0.95rem;
+}
+
+/* ============================= */
+/*       OUTPUT SECTION          */
+/* ============================= */
+
+h4 {
+  color: #34495e;
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.weather-response {
+  margin-top: 10px;
+}
+
+/* ============================= */
+/*       WEATHER CARD            */
+/* ============================= */
+
+.weather-card {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 12px;
+  padding: 25px;
+  color: white;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+}
+
+.weather-header {
+  text-align: center;
+  margin-bottom: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  padding-bottom: 15px;
+}
+
+.weather-header h3 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin: 0;
+  color: white;
+}
+
+.weather-details {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.weather-main {
+  text-align: center;
+}
+
+.temperature {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.condition {
+  font-size: 1.4rem;
+  font-weight: 500;
+  opacity: 0.9;
+  text-transform: capitalize;
+}
+
+.weather-info {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 15px;
+  border-radius: 8px;
+  backdrop-filter: blur(10px);
+}
+
+.info-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.info-item:last-child {
+  border-bottom: none;
+}
+
+.info-label {
+  font-weight: 600;
+  font-size: 0.95rem;
+  opacity: 0.9;
+}
+
+.info-value {
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+/* ============================= */
+/*         LOADING STATE         */
+/* ============================= */
+
+.loading-indicator {
+  text-align: center;
+  padding: 20px;
+  font-style: italic;
+  color: #7f8c8d;
+}
+
+/* ============================= */
+/*       RESPONSIVE DESIGN       */
+/* ============================= */
+
+@media (max-width: 768px) {
+  .service-container {
+    padding: 15px;
+  }
+
+  .service-header h2 {
+    font-size: 1.6rem;
+  }
+
+  .weather-header h3 {
+    font-size: 1.5rem;
+  }
+
+  .temperature {
+    font-size: 2.8rem;
+  }
+
+  .condition {
+    font-size: 1.2rem;
+  }
+
+  .content-box {
+    padding: 15px;
+  }
+
+  .weather-card {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .service-header h2 {
+    font-size: 1.4rem;
+  }
+
+  .temperature {
+    font-size: 2.4rem;
+  }
+
+  .condition {
+    font-size: 1.1rem;
+  }
+
+  .info-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+}
